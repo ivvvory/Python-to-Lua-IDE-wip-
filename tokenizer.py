@@ -1,6 +1,8 @@
 ##Python Lua compiler 
 ##half working tokenizer
 
+# tokenizer.py
+
 import re
 
 class LuaLexer:
