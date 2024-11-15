@@ -1,58 +1,53 @@
-
-Lua Interpreter Project: README
-
+# Lua Interpreter Project
 
 This project provides a basic Lua interpreter written in Python. The interpreter supports running Lua scripts, as well as interactive coding through a terminal interface. The system consists of multiple Python files that handle different aspects of the Lua interpreter, including tokenization, parsing, and evaluation.
 
 Additionally, an interactive terminal mode allows users to run Lua code dynamically in a terminal window.
 
-Table of Contents
-Overview
-File Structure
-Dependencies
-Files Overview
-How to Use
-Running Lua Files
-Interactive Mode
-Opening the Interactive Terminal
-Credits
-Overview
+## Table of Contents
+1. [Overview](#overview)
+2. [File Structure](#file-structure)
+3. [Dependencies](#dependencies)
+4. [Files Overview](#files-overview)
+5. [How to Use](#how-to-use)
+   - [Running Lua Files](#running-lua-files)
+   - [Interactive Mode](#interactive-mode)
+   - [Opening the Interactive Terminal](#opening-the-interactive-terminal)
+6. [Credits](#credits)
+
+## Overview
 This project simulates a Lua interpreter by parsing and evaluating Lua code using Python. It includes the following features:
+- **Run Lua scripts**: Allows users to run `.lua` files and get evaluated results.
+- **Interactive mode**: Lets users type Lua code directly into the terminal and immediately execute it.
+- **Interactive Terminal Window**: Opens a new terminal window where users can code interactively in Lua.
 
-Run Lua scripts: Allows users to run .lua files and get evaluated results.
-Interactive mode: Lets users type Lua code directly into the terminal and immediately execute it.
-Interactive Terminal Window: Opens a new terminal window where users can code interactively in Lua.
 The project is composed of several Python files:
+1. **`tokenizer.py`**: Responsible for breaking Lua code into tokens.
+2. **`parser.py`**: Converts tokens into an Abstract Syntax Tree (AST).
+3. **`interpreter.py`**: Evaluates the AST and runs the Lua code.
+4. **`runner.py`**: The main entry point, used for running files or starting the interactive mode.
+5. **`interactive_terminal.py`**: Opens a new terminal window to allow users to code in an interactive Lua prompt.
 
-tokenizer.py: Responsible for breaking Lua code into tokens.
-parser.py: Converts tokens into an Abstract Syntax Tree (AST).
-interpreter.py: Evaluates the AST and runs the Lua code.
-runner.py: The main entry point, used for running files or starting the interactive mode.
-interactive_terminal.py: Opens a new terminal window to allow users to code in an interactive Lua prompt.
-File Structure
-bash
-Copy code
-lua_interpreter_project/
-│
-├── runner.py               # Main entry point for running scripts and interactive mode.
-├── tokenizer.py            # Tokenizer for breaking Lua code into tokens.
-├── parser.py               # Parses tokens into an Abstract Syntax Tree (AST).
-├── interpreter.py          # Interpreter that evaluates the AST.
-├── interactive_terminal.py # Opens a new terminal window for interactive coding.
-└── examples/               # Example Lua scripts to test the interpreter.
-    └── example.lua         # Example Lua file.
-Dependencies
-This project relies on Python 3.x. No additional libraries are required, as all functionality is implemented using built-in Python modules such as re, subprocess, and os.
+## File Structure
 
-Running the Interpreter
-Make sure you have Python 3.x installed on your machine.
-
-Files Overview
-1. tokenizer.py: Tokenizer
-The LuaLexer class in tokenizer.py is responsible for converting Lua source code into tokens that the parser can work with. Tokens include keywords, numbers, operators, and variables.
+lua_interpreter_project/ │ ├── runner.py # Main entry point for running scripts and interactive mode. ├── tokenizer.py # Tokenizer for breaking Lua code into tokens. ├── parser.py # Parses tokens into an Abstract Syntax Tree (AST). ├── interpreter.py # Interpreter that evaluates the AST. ├── interactive_terminal.py # Opens a new terminal window for interactive coding. └── examples/ # Example Lua scripts to test the interpreter. └── example.lua # Example Lua file.
 
 python
 Copy code
+
+## Dependencies
+This project relies on Python 3.x. No additional libraries are required, as all functionality is implemented using built-in Python modules such as `re`, `subprocess`, and `os`.
+
+### Running the Interpreter
+
+Make sure you have Python 3.x installed on your machine.
+
+## Files Overview
+
+### 1. **`tokenizer.py`**: Tokenizer
+The `LuaLexer` class in `tokenizer.py` is responsible for converting Lua source code into tokens that the parser can work with. Tokens include keywords, numbers, operators, and variables.
+
+```python
 import re
 
 class LuaLexer:
