@@ -1,5 +1,7 @@
 ##lua parser wrote in python 
 
+# parser.py
+
 class LuaParser:
     def __init__(self, lexer):
         self.lexer = lexer
