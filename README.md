@@ -32,13 +32,20 @@ The project is composed of several Python files:
 
 lua_interpreter_project 
 │ 
-├── runner.py # Main entry point for running scripts and interactive mode. 
-├── tokenizer.py # Tokenizer for breaking Lua code into tokens. 
-├── parser.py # Parses tokens into an Abstract Syntax Tree (AST). 
-├── interpreter.py # Interpreter that evaluates the AST. 
-├── interactive_terminal.py # Opens a new terminal window for interactive coding. 
-└── examples/ # Example Lua scripts to test the interpreter. 
-└── example.lua # Example Lua file.
+
+   ├── runner.py # Main entry point for running scripts and interactive mode. 
+
+   ├── tokenizer.py # Tokenizer for breaking Lua code into tokens. 
+
+   ├── parser.py # Parses tokens into an Abstract Syntax Tree (AST). 
+
+   ├── interpreter.py # Interpreter that evaluates the AST. 
+
+   ├── interactive_terminal.py # Opens a new terminal window for interactive coding. 
+
+   └── examples/ # Example Lua scripts to test the interpreter. 
+
+   └── example.lua # Example Lua file.
 
 python
 Copy code
@@ -48,7 +55,7 @@ This project relies on Python 3.x. No additional libraries are required, as all 
 
 ### Running the Interpreter
 
-Make sure you have Python 3.x installed on your machine.
+Make sure you have Python 3.10 installed on your machine.
 
 ## Files Overview
 
