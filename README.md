@@ -47,8 +47,6 @@ lua_interpreter_project
 
    └── example.lua # Example Lua file.
 
-python
-Copy code
 
 ## Dependencies
 This project relies on Python 3.x. No additional libraries are required, as all functionality is implemented using built-in Python modules such as `re`, `subprocess`, and `os`.
@@ -62,7 +60,7 @@ Make sure you have Python 3.10 installed on your machine.
 ### 1. **`tokenizer.py`**: Tokenizer
 The `LuaLexer` class in `tokenizer.py` is responsible for converting Lua source code into tokens that the parser can work with. Tokens include keywords, numbers, operators, and variables.
 
-```python
+```
 import re
 
 class LuaLexer:
@@ -98,8 +96,6 @@ class LuaLexer:
 2. parser.py: Parser
 The LuaParser class converts tokens into an Abstract Syntax Tree (AST). It handles parsing statements, expressions, and other parts of Lua code.
 
-python
-Copy code
 class LuaParser:
     def __init__(self, lexer):
         self.lexer = lexer
@@ -115,8 +111,6 @@ class LuaParser:
 3. interpreter.py: Interpreter
 The LuaInterpreter class evaluates the AST. It handles variable assignments, mathematical operations, and the Lua return statement.
 
-python
-Copy code
 class LuaInterpreter:
     def __init__(self):
         self.env = {}
@@ -134,10 +128,9 @@ class LuaInterpreter:
 4. runner.py: Main Program
 runner.py is the entry point of the Lua interpreter. It allows you to either:
 
-Run a Lua file.
-Enter an interactive mode where you can type and run Lua code directly in the console.
-python
-Copy code
+##Run a Lua file.
+##Enter an interactive mode where you can type and run Lua code directly in the console.
+
 def run_lua_code(code):
     lexer = LuaLexer()
     parser = LuaParser(lexer)
@@ -169,10 +162,8 @@ def main():
             print("Exiting Lua Interpreter.")
             sys.exit(0)
 5. interactive_terminal.py: Interactive Terminal
-The interactive_terminal.py script opens a new terminal window where the user can input Lua code interactively.
+##The interactive_terminal.py script opens a new terminal window where the user can input Lua code interactively.
 
-python
-Copy code
 import subprocess
 import sys
 
@@ -181,11 +172,7 @@ def open_terminal():
         subprocess.run(['start', 'cmd', '/K', 'python', 'runner.py'], shell=True)
     elif sys.platform == 'darwin' or sys.platform.startswith('linux'):
         subprocess.run(['gnome-terminal', '--', 'python3', 'runner.py'])
-How to Use
-1. Running Lua Files
-You can run a Lua script stored in a .lua file by following these steps:
 
-Launch runner.py.
 Choose the option to run a Lua file (Option 1).
 Enter the name of the Lua file (e.g., example.lua).
 The script will be parsed and evaluated, and the result will be displayed in the terminal.
