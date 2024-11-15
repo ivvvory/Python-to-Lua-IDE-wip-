@@ -195,8 +195,7 @@ This will open a new terminal window where you can type and execute Lua code int
 Example Lua File
 Here is an example Lua script (example.lua) that you can use to test the interpreter:
 
-lua
-Copy code
+
 local a = 10
 local b = 20
 return a + b
