@@ -30,7 +30,15 @@ The project is composed of several Python files:
 
 ## File Structure
 
-lua_interpreter_project/ │ ├── runner.py # Main entry point for running scripts and interactive mode. ├── tokenizer.py # Tokenizer for breaking Lua code into tokens. ├── parser.py # Parses tokens into an Abstract Syntax Tree (AST). ├── interpreter.py # Interpreter that evaluates the AST. ├── interactive_terminal.py # Opens a new terminal window for interactive coding. └── examples/ # Example Lua scripts to test the interpreter. └── example.lua # Example Lua file.
+lua_interpreter_project 
+│ 
+├── runner.py # Main entry point for running scripts and interactive mode. 
+├── tokenizer.py # Tokenizer for breaking Lua code into tokens. 
+├── parser.py # Parses tokens into an Abstract Syntax Tree (AST). 
+├── interpreter.py # Interpreter that evaluates the AST. 
+├── interactive_terminal.py # Opens a new terminal window for interactive coding. 
+└── examples/ # Example Lua scripts to test the interpreter. 
+└── example.lua # Example Lua file.
 
 python
 Copy code
