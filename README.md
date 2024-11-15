@@ -1,5 +1,7 @@
 
 Lua Interpreter Project: README
+
+
 This project provides a basic Lua interpreter written in Python. The interpreter supports running Lua scripts, as well as interactive coding through a terminal interface. The system consists of multiple Python files that handle different aspects of the Lua interpreter, including tokenization, parsing, and evaluation.
 
 Additionally, an interactive terminal mode allows users to run Lua code dynamically in a terminal window.
