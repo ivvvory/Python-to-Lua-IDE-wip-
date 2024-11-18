@@ -43,10 +43,6 @@ lua_interpreter_project
 
    ├── interactive_terminal.py # Opens a new terminal window for interactive coding. 
 
-   └── examples/ # Example Lua scripts to test the interpreter. 
-
-   └── example.lua # Example Lua file.
-
 
 ## Dependencies
 This project relies on Python 3.x. No additional libraries are required, as all functionality is implemented using built-in Python modules such as `re`, `subprocess`, and `os`.
